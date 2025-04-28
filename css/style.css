@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 999;
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: relative;
+}
+
+header .container .logo img {
+  width: 140px;
+}
+
+header .container nav .links-ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+header .container nav .links-ul li a {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+header .container nav .links-ul li {
+  position: relative;
+}
+
+.nested-list {
+  position: absolute;
+  background: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 140px;
+
+  margin-left: -10px;
+  display: none;
+  margin-top: 5px;
+}
+
+.nested-list li a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 10px;
+}
+
+header .container nav .links-ul li:hover .nested-list {
+  display: block;
+}
+
+.nested-list li a:hover {
+  background: rgba(219, 219, 219, 0.518);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.nested-list li a:hover i {
+  rotate: 90deg;
+  transition: 0.3s ease-in-out;
+}
+
+.home-img-background-and-text {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bk-img-home.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  position: relative;
+}
+
+.home-img-background-and-text .container-text-home {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 30%;
+}
+
+.home-img-background-and-text .container-text-home h2 {
+  font-size: 27px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.home-img-background-and-text .container-text-home p {
+  margin-top: 45px;
+  width: 35%;
+  line-height: 20px;
+}
+
+.home-img-background-and-text .container-text-home .btn-home {
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.home-img-background-and-text .container-text-home .btn-home button {
+  padding: 10px 50px;
+  font-size: 17px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.home-img-background-and-text .container-text-home .btn-home button:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #ff9800;
+  scale: 1.1;
+}
+
+@media (max-width: 600px) {
+  header {
+    background: rgb(255, 255, 255, 0);
+  }
+
+  header .container .logo img {
+    width: 160px;
+    margin-top: 10px;
+    margin-left: -25px;
+  }
+
+  header .container nav .links-ul {
+    display: none;
+  }
+
+  .home-img-background-and-text {
+    background-image: url(../img/bk_home_mobile.jpg);
+  }
+
+  .home-img-background-and-text .container-text-home {
+    top: 50%;
+  }
+
+  .home-img-background-and-text .container-text-home h2 {
+    font-size: 17px;
+
+    font-weight: 700;
+  }
+
+  .home-img-background-and-text .container-text-home p {
+    margin-top: 35px;
+    width: 95%;
+  }
+
+  .home-img-background-and-text .container-text-home .btn-home button {
+    padding: 17px 30px;
+  }
+}
